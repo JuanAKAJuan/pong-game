@@ -3,7 +3,7 @@
 ### TODO:
 - [x] Generate a sprite font for the scores and add it to the Content Pipeline. The recommended font size is 70,
 but you can certainly use other font sizes. Use Bold style. Set the maximum score to be 100.
-- [ ] Replace the ball texture with a ball image created by yourself or downloaded from Internet. You may need
+- [x] Replace the ball texture with a ball image created by yourself or downloaded from Internet. You may need
 to convert the image format from .gif to .png, since .gif is not supported by XNA.
 - [ ] Add a background image (texture) to the game. The background can simulate the table tennis table or other things.
 - [ ] Add sound effects when the ball is bounced by the paddle or when the ball hits the left or right border.
