@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "mgcb-editor/3.8.2.1105": {
+        "runtime": {
+          "mgcb-editor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "mgcb-editor/3.8.2.1105": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

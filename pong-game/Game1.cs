@@ -21,7 +21,7 @@ namespace Ping_Pong
         // the score
         int m_Score1 = 0;
         int m_Score2 = 0;
-        Texture2D m_textureNumbers;
+        SpriteFont m_scoreFont;
         Rectangle[] m_ScoreRect = null;
 
         // the ball
@@ -106,7 +106,7 @@ namespace Ping_Pong
         }
 
         // initial play state, called when the game is first
-        // run, and whever a player scores 10 goals
+        // run, and whenever a player scores 100 goals
         public void ResetGame()
         {
             // reset scores
@@ -161,8 +161,8 @@ namespace Ping_Pong
             m_paddle2.Visual = m_texturePaddle;
 
             // load the texture for the score
-            m_textureNumbers =
-                Content.Load<Texture2D>(@"media\numbers");
+            m_scoreFont =
+                Content.Load<SpriteFont>(@"media\ScoreFont");
         }
 
 
@@ -239,8 +239,8 @@ namespace Ping_Pong
                 m_ball.DX = -5.0f;
             }
 
-            // reset game if a player scores 10 goals
-            if (m_Score1 > 9 || m_Score2 > 9)
+            // Reset game if a player scores 100 goals
+            if (m_Score1 >= 100 || m_Score2 >= 100)
             {
                 ResetGame();
             }
@@ -377,10 +377,8 @@ namespace Ping_Pong
         // draw the score at the specified location
         public void DrawScore(float x, float y, int score)
         {
-            spriteBatch.Draw((Texture2D)m_textureNumbers,
-                new Vector2(x, y),
-                m_ScoreRect[score % 10],
-                Color.Gray);
+            string scoreText = $"{score}";
+            spriteBatch.DrawString(m_scoreFont, scoreText, new Vector2(x, y), Color.Gray);
         }
 
         // actually draw our game objects
@@ -394,9 +392,9 @@ namespace Ping_Pong
 
             // draw the score first, so the ball can
             // move over it without being obscured
-            DrawScore((float)SCREEN_WIDTH * 0.25f,
+            DrawScore(SCREEN_WIDTH * 0.25f,
                 20, m_Score1);
-            DrawScore((float)SCREEN_WIDTH * 0.65f,
+            DrawScore(SCREEN_WIDTH * 0.65f,
                 20, m_Score2);
 
             // render the game objects

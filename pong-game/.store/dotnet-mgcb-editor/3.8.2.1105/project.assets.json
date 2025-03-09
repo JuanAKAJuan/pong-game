@@ -1,0 +1,19 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0/fedora.41-x64": {
+      "dotnet-mgcb-editor/3.8.2.1105": {
+        "type": "package",
+        "tools": {
+          "tools/net8.0/any/DotnetToolSettings.xml": {},
+          "tools/net8.0/any/mgcb-editor.deps.json": {},
+          "tools/net8.0/any/mgcb-editor.dll": {},
+          "tools/net8.0/any/mgcb-editor.pdb": {},
+          "tools/net8.0/any/mgcb-editor.runtimeconfig.json": {}
+        }
+      }
+    }
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {}
+}
