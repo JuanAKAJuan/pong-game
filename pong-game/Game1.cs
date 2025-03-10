@@ -24,14 +24,14 @@ namespace Ping_Pong
         SpriteFont m_scoreFont;
         Rectangle[] m_ScoreRect = null;
 
-        // the ball
         Ball m_ball;
         Texture2D m_textureBall;
 
-        // the paddles
         Paddle m_paddle1;
         Paddle m_paddle2;
         Texture2D m_texturePaddle;
+
+        Texture2D m_textureBackground;
 
         // constants
         const int SCREEN_WIDTH = 800; // 640;
@@ -149,20 +149,19 @@ namespace Ping_Pong
         // load our textures from disk
         protected void LoadGameGraphics()
         {
-            // load the texture for the ball
             m_textureBall =
                 Content.Load<Texture2D>(@"media\ball");
             m_ball.Visual = m_textureBall;
 
-            // load the texture for the paddles
             m_texturePaddle =
                 Content.Load<Texture2D>(@"media\paddle");
             m_paddle1.Visual = m_texturePaddle;
             m_paddle2.Visual = m_texturePaddle;
 
-            // load the texture for the score
             m_scoreFont =
                 Content.Load<SpriteFont>(@"media\ScoreFont");
+
+            m_textureBackground = Content.Load<Texture2D>(@"media/background");
         }
 
 
@@ -384,11 +383,12 @@ namespace Ping_Pong
         // actually draw our game objects
         public void Render()
         {
-            // black background
-            graphics.GraphicsDevice.Clear(Color.Black);
-
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+                
             // start rendering our game graphics
             spriteBatch.Begin();
+
+            spriteBatch.Draw(m_textureBackground, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
 
             // draw the score first, so the ball can
             // move over it without being obscured
