@@ -15,28 +15,29 @@ namespace Ping_Pong
     /// </summary>  
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        private const int SCREEN_WIDTH = 800; // 640;
+        private const int SCREEN_HEIGHT = 480;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        // the score
-        int m_Score1 = 0;
-        int m_Score2 = 0;
-        SpriteFont m_scoreFont;
-        Rectangle[] m_ScoreRect = null;
+        private int m_Score1 = 0;
+        private int m_Score2 = 0;
+        private SpriteFont m_scoreFont;
+        private Rectangle[] m_ScoreRect = null;
 
-        Ball m_ball;
-        Texture2D m_textureBall;
+        private Ball m_ball;
+        private Texture2D m_textureBall;
 
-        Paddle m_paddle1;
-        Paddle m_paddle2;
-        Texture2D m_texturePaddle;
+        private Paddle m_paddle1;
+        private Paddle m_paddle2;
+        private Texture2D m_texturePaddle;
 
-        Texture2D m_textureBackground;
+        private Texture2D m_textureBackground;
 
-        // constants
-        const int SCREEN_WIDTH = 800; // 640;
-        const int SCREEN_HEIGHT = 480;
-
+        private SoundEffect m_paddleHitSound;
+        private SoundEffect m_wallHitSound;
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -144,6 +145,9 @@ namespace Ping_Pong
 
             // load images from disk
             LoadGameGraphics();
+            
+            m_paddleHitSound = Content.Load<SoundEffect>(@"audio\paddle-hit");
+            m_wallHitSound = Content.Load<SoundEffect>(@"audio\wall-hit");
         }
 
         // load our textures from disk
@@ -161,7 +165,7 @@ namespace Ping_Pong
             m_scoreFont =
                 Content.Load<SpriteFont>(@"media\ScoreFont");
 
-            m_textureBackground = Content.Load<Texture2D>(@"media/background");
+            m_textureBackground = Content.Load<Texture2D>(@"media\background");
         }
 
 
@@ -208,6 +212,8 @@ namespace Ping_Pong
             {
                 // reverse vertical direction
                 m_ball.DY *= -1;
+                
+                m_wallHitSound.Play();
             }
 
             // did ball touch the left side?
@@ -222,6 +228,8 @@ namespace Ping_Pong
 
                 // reduce speed, reverse direction
                 m_ball.DX = 5.0f;
+                
+                m_wallHitSound.Play();
             }
 
             // did ball touch the right side?
@@ -236,6 +244,8 @@ namespace Ping_Pong
 
                 // reduce speed, reverse direction
                 m_ball.DX = -5.0f;
+                
+                m_wallHitSound.Play();
             }
 
             // Reset game if a player scores 100 goals
@@ -252,6 +262,8 @@ namespace Ping_Pong
 
                 // increase the speed a little.
                 m_ball.DX *= 1.15f;
+                
+                m_paddleHitSound.Play(0.3f, 0.0f, 0.0f);
             }
         }
 

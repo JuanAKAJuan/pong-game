@@ -6,7 +6,7 @@ but you can certainly use other font sizes. Use Bold style. Set the maximum scor
 - [x] Replace the ball texture with a ball image created by yourself or downloaded from Internet. You may need
 to convert the image format from .gif to .png, since .gif is not supported by XNA.
 - [x] Add a background image (texture) to the game. The background can simulate the table tennis table or other things.
-- [ ] Add sound effects when the ball is bounced by the paddle or when the ball hits the left or right border.
+- [x] Add sound effects when the ball is bounced by the paddle or when the ball hits the left or right border.
 Some sound effects can be found at this website: http://www.pacdv.com/sounds/interface_sounds.html. Use the SoundEffect class for this task.
 - [ ] Add background music (using .wma or .mp3 formats) to the game. Set the play mode to repeat so that the background music
 is continuously played. Use the MediaPlayer and Song classes for this task.

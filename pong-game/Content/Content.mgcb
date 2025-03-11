@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin audio/paddle-hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/paddle-hit.wav
+
+#begin audio/wall-hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/wall-hit.wav
+
 #begin media/background.png
 /importer:TextureImporter
 /processor:TextureProcessor
