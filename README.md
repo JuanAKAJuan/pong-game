@@ -10,7 +10,7 @@ to convert the image format from .gif to .png, since .gif is not supported by XN
 Some sound effects can be found at this website: http://www.pacdv.com/sounds/interface_sounds.html. Use the SoundEffect class for this task.
 - [x] Add background music (using .wma or .mp3 formats) to the game. Set the play mode to repeat so that the background music
 is continuously played. Use the MediaPlayer and Song classes for this task.
-- [ ] Handle the following keyboard inputs.
+- [x] Handle the following keyboard inputs.
     - Reset the game using "R".
     - Exit the game using "Q" or "ESC".
     - Toggle (pause and resume) the background music using "P".

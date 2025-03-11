@@ -39,6 +39,9 @@ namespace Ping_Pong
         private SoundEffect _wallHitSound;
 
         private Song _backgroundMusic;
+
+        private KeyboardState _currentKeyboardState;
+        private KeyboardState _previousKeyboardState;
         
         public Game1()
         {
@@ -179,6 +182,21 @@ namespace Ping_Pong
             MediaPlayer.Play(_backgroundMusic);
         }
 
+        private void ToggleMusic()
+        {
+            if (MediaPlayer.State == MediaState.Playing)
+            {
+                MediaPlayer.Pause();
+            }
+            else if (MediaPlayer.State == MediaState.Paused)
+            {
+                MediaPlayer.Resume();
+            }
+            else if (MediaPlayer.State == MediaState.Stopped)
+            {
+                MediaPlayer.Play(_backgroundMusic);
+            }
+        }
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
@@ -196,22 +214,34 @@ namespace Ping_Pong
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
+            _previousKeyboardState = _currentKeyboardState;
+            _currentKeyboardState = Keyboard.GetState();
+            
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-                Keyboard.GetState().IsKeyDown(Keys.Escape))
+                _currentKeyboardState.IsKeyDown(Keys.Escape) || _currentKeyboardState.IsKeyDown(Keys.Q))
+            {
                 Exit();
+            }
 
-            // update the ball's location on the screen
-            MoveBall();
-            // update the paddles' locations on the screen
-            MovePaddles();
+            if (_currentKeyboardState.IsKeyDown(Keys.P) && !_previousKeyboardState.IsKeyDown(Keys.P))
+            {
+                ToggleMusic();
+            }
+
+            if (_currentKeyboardState.IsKeyDown(Keys.R) && !_previousKeyboardState.IsKeyDown(Keys.R))
+            {
+                ResetGame();
+            }
+
+            UpdateBallLocation();
+            UpdatePaddlesLocation();
 
             base.Update(gameTime);
         }
 
         // move the ball based on its current DX and DY 
         // settings. check for collisions
-        private void MoveBall()
+        private void UpdateBallLocation()
         {
             // actually move the ball
             _ball.X += _ball.DX;
@@ -314,7 +344,7 @@ namespace Ping_Pong
         private const float PADDLE_STRIDE = 10.0f;
 
         // actually move the paddles
-        private void MovePaddles()
+        private void UpdatePaddlesLocation()
         {
             // define bounds for the paddles
             float minY = 0.0f;
