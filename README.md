@@ -8,7 +8,7 @@ to convert the image format from .gif to .png, since .gif is not supported by XN
 - [x] Add a background image (texture) to the game. The background can simulate the table tennis table or other things.
 - [x] Add sound effects when the ball is bounced by the paddle or when the ball hits the left or right border.
 Some sound effects can be found at this website: http://www.pacdv.com/sounds/interface_sounds.html. Use the SoundEffect class for this task.
-- [ ] Add background music (using .wma or .mp3 formats) to the game. Set the play mode to repeat so that the background music
+- [x] Add background music (using .wma or .mp3 formats) to the game. Set the play mode to repeat so that the background music
 is continuously played. Use the MediaPlayer and Song classes for this task.
 - [ ] Handle the following keyboard inputs.
     - Reset the game using "R".

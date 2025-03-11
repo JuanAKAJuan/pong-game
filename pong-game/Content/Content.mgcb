@@ -13,6 +13,12 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin audio/background-music.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:audio/background-music.mp3
+
 #begin audio/paddle-hit.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
