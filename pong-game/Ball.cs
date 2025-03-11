@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ping_Pong
+﻿namespace Ping_Pong
 {
     class Ball : GameObject
     {
-        protected float _DX;
-        public float DX
+        private float _dx;
+        public float Dx
         {
-            get { return _DX; }
-            set { _DX = value; }
+            get => _dx;
+            set => _dx = value;
         }
 
-        protected float m_DY;
-        public float DY
+        private float _dy;
+        public float Dy
         {
-            get { return m_DY; }
-            set { m_DY = value; }
+            get => _dy;
+            set => _dy = value;
         }
     }
 }

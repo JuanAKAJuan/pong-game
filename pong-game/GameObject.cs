@@ -1,51 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 namespace Ping_Pong
 {
-    class GameObject
+    internal class GameObject
     {
-        protected float m_X;
-        public float X
-        {
-            get { return m_X; }
-            set { m_X = value; }
-        }
+        public float X { get; set; }
 
-        protected float m_Y;
-        public float Y
-        {
-            get { return m_Y; }
-            set { m_Y = value; }
-        }
+        public float Y { get; set; }
 
-        protected float m_Width;
-        public float Width
-        {
-            get { return m_Width; }
-            set { m_Width = value; }
-        }
+        public float Width { get; set; }
 
-        protected float m_Height;
-        public float Height
-        {
-            get { return m_Height; }
-            set { m_Height = value; }
-        }
+        public float Height { get; set; }
 
-        public Rectangle Rect
-        {
-            get { return new Rectangle((int)X, (int)Y, (int)Width, (int)Height); }
-        }
+        public Rectangle Rect => new((int)X, (int)Y, (int)Width, (int)Height);
 
-        protected object m_Visual = null;
-        public object Visual
-        {
-            get { return m_Visual; }
-            set { m_Visual = value; }
-        }
+        public object Visual { get; set; }
     }
 }

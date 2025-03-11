@@ -1,9 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
@@ -24,7 +21,6 @@ namespace Ping_Pong
         private int _score1;
         private int _score2;
         private SpriteFont _scoreFont;
-        private Rectangle[] _scoreRect;
 
         private Ball _ball;
         private Texture2D _textureBall;
@@ -98,17 +94,6 @@ namespace Ping_Pong
             _paddle2.Width = 15.0f;
             _paddle2.Height = 100.0f;
 
-            // map the digits in the image to actual numbers
-            _scoreRect = new Rectangle[10];
-            for (int i = 0; i < 10; i++)
-            {
-                _scoreRect[i] = new Rectangle(
-                    i * 45, // X
-                    0,      // Y
-                    45,     // Width
-                    75);    // Height
-            }
-
             ResetGame();
         }
 
@@ -122,22 +107,22 @@ namespace Ping_Pong
 
             // place the ball at the center of the screen
             _ball.X =
-                ScreenWidth / 2 - _ball.Width / 2;
+                (float)ScreenWidth / 2 - _ball.Width / 2;
             _ball.Y =
-                ScreenHeight / 2 - _ball.Height / 2;
+                (float)ScreenHeight / 2 - _ball.Height / 2;
 
             // set a speed and direction for the ball
-            _ball.DX = 5.0f;
-            _ball.DY = 4.0f;
+            _ball.Dx = 5.0f;
+            _ball.Dy = 4.0f;
 
             // place the paddles at either end of the screen
             _paddle1.X = 30;
             _paddle1.Y =
-                ScreenHeight / 2 - _paddle1.Height / 2;
+                (float)ScreenHeight / 2 - _paddle1.Height / 2;
             _paddle2.X =
                 ScreenWidth - 30 - _paddle2.Width;
             _paddle2.Y =
-                ScreenHeight / 2 - _paddle1.Height / 2;
+                (float)ScreenHeight / 2 - _paddle1.Height / 2;
         }
 
         /// <summary>
@@ -239,20 +224,20 @@ namespace Ping_Pong
             base.Update(gameTime);
         }
 
-        // move the ball based on its current DX and DY 
+        // move the ball based on its current Dx and Dy 
         // settings. check for collisions
         private void UpdateBallLocation()
         {
             // actually move the ball
-            _ball.X += _ball.DX;
-            _ball.Y += _ball.DY;
+            _ball.X += _ball.Dx;
+            _ball.Y += _ball.Dy;
 
             // did ball touch top or bottom side?
             if (_ball.Y <= 0 ||
                 _ball.Y >= ScreenHeight - _ball.Height)
             {
                 // reverse vertical direction
-                _ball.DY *= -1;
+                _ball.Dy *= -1;
                 
                 _wallHitSound.Play();
             }
@@ -268,7 +253,7 @@ namespace Ping_Pong
                 _score2++;
 
                 // reduce speed, reverse direction
-                _ball.DX = 5.0f;
+                _ball.Dx = 5.0f;
                 
                 _wallHitSound.Play();
             }
@@ -284,7 +269,7 @@ namespace Ping_Pong
                 _score1++;
 
                 // reduce speed, reverse direction
-                _ball.DX = -5.0f;
+                _ball.Dx = -5.0f;
                 
                 _wallHitSound.Play();
             }
@@ -299,10 +284,10 @@ namespace Ping_Pong
             if (CollisionOccurred())
             {
                 // reverse hoizontal direction
-                _ball.DX *= -1;
+                _ball.Dx *= -1;
 
                 // increase the speed a little.
-                _ball.DX *= 1.15f;
+                _ball.Dx *= 1.15f;
                 
                 _paddleHitSound.Play(0.3f, 0.0f, 0.0f);
             }
@@ -311,11 +296,10 @@ namespace Ping_Pong
         // check for a collision between the ball and paddles
         private bool CollisionOccurred()
         {
-            // assume no collision
-            bool retval = false;
+            bool retval;
 
             // heading towards player one
-            if (_ball.DX < 0)
+            if (_ball.Dx < 0)
             {
                 Rectangle b = _ball.Rect;
                 Rectangle p = _paddle1.Rect;
@@ -326,7 +310,7 @@ namespace Ping_Pong
                     b.Bottom > p.Top;
             }
             // heading towards player two
-            else // _ball.DX > 0
+            else // _ball.Dx > 0
             {
                 Rectangle b = _ball.Rect;
                 Rectangle p = _paddle2.Rect;
@@ -341,7 +325,7 @@ namespace Ping_Pong
         }
 
         // how much to move paddle each frame
-        private const float PADDLE_STRIDE = 10.0f;
+        private const float PaddleStride = 10.0f;
 
         // actually move the paddles
         private void UpdatePaddlesLocation()
@@ -371,7 +355,7 @@ namespace Ping_Pong
             // move the paddle
             if (PlayerUp)
             {
-                _paddle1.Y -= PADDLE_STRIDE;
+                _paddle1.Y -= PaddleStride;
                 if (_paddle1.Y < minY)
                 {
                     _paddle1.Y = minY;
@@ -379,7 +363,7 @@ namespace Ping_Pong
             }
             else if (PlayerDown)
             {
-                _paddle1.Y += PADDLE_STRIDE;
+                _paddle1.Y += PaddleStride;
                 if (_paddle1.Y > maxY)
                 {
                     _paddle1.Y = maxY;
@@ -399,7 +383,7 @@ namespace Ping_Pong
             // move the paddle
             if (PlayerUp)
             {
-                _paddle2.Y -= PADDLE_STRIDE;
+                _paddle2.Y -= PaddleStride;
                 if (_paddle2.Y < minY)
                 {
                     _paddle2.Y = minY;
@@ -407,7 +391,7 @@ namespace Ping_Pong
             }
             else if (PlayerDown)
             {
-                _paddle2.Y += PADDLE_STRIDE;
+                _paddle2.Y += PaddleStride;
                 if (_paddle2.Y > maxY)
                 {
                     _paddle2.Y = maxY;
