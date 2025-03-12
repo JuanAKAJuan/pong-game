@@ -111,9 +111,29 @@ namespace Ping_Pong
             _ball.Y =
                 (float)ScreenHeight / 2 - _ball.Height / 2;
 
-            // set a speed and direction for the ball
-            _ball.Dx = 5.0f;
-            _ball.Dy = 4.0f;
+            // Randomize the initial speed and direction of the ball
+            var random = new Random();
+            if (random.Next(2) == 0) // 50% chance for positive or negative
+            {
+                // Positive x direction: [4, 6]
+                _ball.Dx = 4 + (float)(random.NextDouble() * 2);
+            }
+            else
+            {
+                // Negative x direction: [-6, -4]
+                _ball.Dx = -6 + (float)(random.NextDouble() * 2);
+            }
+
+            if (random.Next(2) == 0)
+            {
+                // Positive y direction: [3, 5]
+                _ball.Dy = 3 + (float)(random.NextDouble() * 2);
+            }
+            else
+            {
+                // Negative y direction: [-5, -3]
+                _ball.Dy = -5 + (float)(random.NextDouble() * 2);
+            }
 
             // place the paddles at either end of the screen
             _paddle1.X = 30;
