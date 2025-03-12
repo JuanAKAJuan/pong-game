@@ -1,5 +1,7 @@
 # pong-game
 
+https://github.com/user-attachments/assets/b0849e6e-df57-422c-bcd7-964478862136
+
 ### TODO:
 - [x] Generate a sprite font for the scores and add it to the Content Pipeline. The recommended font size is 70,
 but you can certainly use other font sizes. Use Bold style. Set the maximum score to be 100.
