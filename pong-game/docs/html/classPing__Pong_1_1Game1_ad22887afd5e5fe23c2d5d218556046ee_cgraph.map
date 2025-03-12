@@ -1,0 +1,5 @@
+<map id="Ping_Pong.Game1.Render" name="Ping_Pong.Game1.Render">
+<area shape="rect" id="Node000001" title="Draws the game objects." alt="" coords="5,5,195,33"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#a5e2d8c065ebbe30b5452d6e6366d21ff" title="Draws the score at the specified location." alt="" coords="243,5,456,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,16,227,16,227,22,195,22"/>
+</map>

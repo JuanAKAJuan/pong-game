@@ -1,0 +1,5 @@
+<map id="Ping_Pong.Game1.InitGameObjects" name="Ping_Pong.Game1.InitGameObjects">
+<area shape="rect" id="Node000001" title="Initializes game&#45;related tasks." alt="" coords="5,5,209,50"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#a30e3122abc5d6d6555b394ef9dfea097" title="Initializes the play state, called when the game is first run, and whenever a player scores 100 goals..." alt="" coords="257,14,476,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,25,241,25,241,30,209,30"/>
+</map>

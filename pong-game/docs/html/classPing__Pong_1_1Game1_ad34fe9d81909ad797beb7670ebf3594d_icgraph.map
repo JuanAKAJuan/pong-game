@@ -1,0 +1,7 @@
+<map id="Ping_Pong.Game1.CollisionOccurred" name="Ping_Pong.Game1.CollisionOccurred">
+<area shape="rect" id="Node000001" title="Checks for a collision between the ball and paddles." alt="" coords="507,5,706,50"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#a915e13834aeb50e8f3fd741c5cc9d861" title="Moves the ball based on its current Dx and Dy settings and checks for collisions." alt="" coords="244,5,459,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,30,459,30,459,25,492,25"/>
+<area shape="rect" id="Node000003" href="$classPing__Pong_1_1Game1.html#adcf5d3a66fa192e3318b14188dd0c34a" title="Allows the game to run logic such as updating the world, checking for collisions, gathering input,..." alt="" coords="5,14,196,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,30,196,30,196,25,228,25"/>
+</map>

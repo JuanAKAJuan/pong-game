@@ -1,0 +1,5 @@
+<map id="Ping_Pong.Game1.InitScreen" name="Ping_Pong.Game1.InitScreen">
+<area shape="rect" id="Node000001" title="Initializes screen&#45;related tasks." alt="" coords="253,5,461,33"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#ae8a0320b8583f5f671dcf98a5ca232df" title="Allows the game to perform any initialization it needs to before starting to run. This is where it ca..." alt="" coords="5,5,205,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,22,205,22,205,16,237,16"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Ping_Pong.Game1.Draw" name="Ping_Pong.Game1.Draw">
+<area shape="rect" id="Node000001" title="This is called when the game should draw itself." alt="" coords="5,5,183,33"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#ad22887afd5e5fe23c2d5d218556046ee" title="Draws the game objects." alt="" coords="231,5,420,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,16,215,16,215,22,183,22"/>
+<area shape="rect" id="Node000003" href="$classPing__Pong_1_1Game1.html#a5e2d8c065ebbe30b5452d6e6366d21ff" title="Draws the score at the specified location." alt="" coords="468,5,681,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="421,16,453,16,453,22,421,22"/>
+</map>

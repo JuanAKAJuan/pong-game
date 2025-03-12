@@ -1,0 +1,14 @@
+<map id="Ping_Pong.Game1.Update" name="Ping_Pong.Game1.Update">
+<area shape="rect" id="Node000001" title="Allows the game to run logic such as updating the world, checking for collisions, gathering input,..." alt="" coords="5,63,196,91"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#a30e3122abc5d6d6555b394ef9dfea097" title="Initializes the play state, called when the game is first run, and whenever a player scores 100 goals..." alt="" coords="533,7,752,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,60,180,37,243,18,313,8,385,4,518,6,518,12,385,9,314,14,244,23,182,42,130,65"/>
+<area shape="rect" id="Node000003" href="$classPing__Pong_1_1Game1.html#a464836bb76e0ecc877dee9dc83d12840" title="Toggles the background music." alt="" coords="253,32,476,60"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,63,237,58,238,64,196,68"/>
+<area shape="rect" id="Node000004" href="$classPing__Pong_1_1Game1.html#a915e13834aeb50e8f3fd741c5cc9d861" title="Moves the ball based on its current Dx and Dy settings and checks for collisions." alt="" coords="257,84,472,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,85,242,90,241,95,196,90"/>
+<area shape="rect" id="Node000006" href="$classPing__Pong_1_1Game1.html#a21511b21abe5cc5bf06d34df6fc7d6c1" title="Moves the paddles based on player input." alt="" coords="244,153,485,198"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="132,89,245,138,265,145,263,150,243,143,130,94"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="445,81,484,69,583,37,585,42,486,74,447,86"/>
+<area shape="rect" id="Node000005" href="$classPing__Pong_1_1Game1.html#ad34fe9d81909ad797beb7670ebf3594d" title="Checks for a collision between the ball and paddles." alt="" coords="543,84,742,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="473,104,527,104,527,109,473,109"/>
+</map>

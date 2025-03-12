@@ -1,0 +1,12 @@
+<map id="Ping_Pong.Game1.ResetGame" name="Ping_Pong.Game1.ResetGame">
+<area shape="rect" id="Node000001" title="Initializes the play state, called when the game is first run, and whenever a player scores 100 goals..." alt="" coords="516,74,735,102"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#a18d2c9e0d2bb1f3432c54781a8c822e7" title="Initializes game&#45;related tasks." alt="" coords="259,5,462,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="546,72,462,53,463,48,547,67"/>
+<area shape="rect" id="Node000004" href="$classPing__Pong_1_1Game1.html#adcf5d3a66fa192e3318b14188dd0c34a" title="Allows the game to run logic such as updating the world, checking for collisions, gathering input,..." alt="" coords="10,103,200,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="501,97,201,114,200,109,501,92"/>
+<area shape="rect" id="Node000005" href="$classPing__Pong_1_1Game1.html#a915e13834aeb50e8f3fd741c5cc9d861" title="Moves the ball based on its current Dx and Dy settings and checks for collisions." alt="" coords="253,125,468,170"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="547,108,463,127,462,122,546,103"/>
+<area shape="rect" id="Node000003" href="$classPing__Pong_1_1Game1.html#ae8a0320b8583f5f671dcf98a5ca232df" title="Allows the game to perform any initialization it needs to before starting to run. This is where it ca..." alt="" coords="5,14,205,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,30,205,30,205,25,243,25"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="237,136,200,131,201,126,238,130"/>
+</map>

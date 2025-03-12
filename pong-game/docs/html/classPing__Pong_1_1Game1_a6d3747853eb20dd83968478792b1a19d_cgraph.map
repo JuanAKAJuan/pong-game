@@ -1,0 +1,7 @@
+<map id="Ping_Pong.Game1.LoadContent" name="Ping_Pong.Game1.LoadContent">
+<area shape="rect" id="Node000001" title="LoadContent will be called once per game and is the place to load all of your content." alt="" coords="5,48,231,76"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#a5bd36bd5978b0fe522f84ce64d8bcb04" title="Loads game audio from disk." alt="" coords="279,5,492,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,45,263,41,263,46,230,51"/>
+<area shape="rect" id="Node000003" href="$classPing__Pong_1_1Game1.html#ac022f03857d45e8396e520c70eceb9c5" title="Loads game graphics from disk." alt="" coords="279,75,492,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,74,263,79,263,84,229,79"/>
+</map>

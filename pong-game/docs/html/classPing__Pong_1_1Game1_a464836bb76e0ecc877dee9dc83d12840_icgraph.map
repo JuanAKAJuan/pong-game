@@ -1,0 +1,5 @@
+<map id="Ping_Pong.Game1.ToggleMusic" name="Ping_Pong.Game1.ToggleMusic">
+<area shape="rect" id="Node000001" title="Toggles the background music." alt="" coords="244,5,467,33"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#adcf5d3a66fa192e3318b14188dd0c34a" title="Allows the game to run logic such as updating the world, checking for collisions, gathering input,..." alt="" coords="5,5,196,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,22,196,22,196,16,228,16"/>
+</map>

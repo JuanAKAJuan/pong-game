@@ -1,0 +1,5 @@
+<map id="Ping_Pong.Game1.LoadGameGraphics" name="Ping_Pong.Game1.LoadGameGraphics">
+<area shape="rect" id="Node000001" title="Loads game graphics from disk." alt="" coords="279,5,492,50"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#a6d3747853eb20dd83968478792b1a19d" title="LoadContent will be called once per game and is the place to load all of your content." alt="" coords="5,14,231,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,30,231,30,231,25,263,25"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Ping_Pong.Game1.UpdateBallLocation" name="Ping_Pong.Game1.UpdateBallLocation">
+<area shape="rect" id="Node000001" title="Moves the ball based on its current Dx and Dy settings and checks for collisions." alt="" coords="5,36,221,81"/>
+<area shape="rect" id="Node000002" href="$classPing__Pong_1_1Game1.html#ad34fe9d81909ad797beb7670ebf3594d" title="Checks for a collision between the ball and paddles." alt="" coords="279,5,478,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,43,263,38,264,44,221,49"/>
+<area shape="rect" id="Node000003" href="$classPing__Pong_1_1Game1.html#a30e3122abc5d6d6555b394ef9dfea097" title="Initializes the play state, called when the game is first run, and whenever a player scores 100 goals..." alt="" coords="269,74,488,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,68,253,71,253,76,221,73"/>
+</map>
