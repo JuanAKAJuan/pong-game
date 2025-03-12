@@ -1,19 +1,9 @@
 ﻿namespace Ping_Pong
 {
-    class Ball : GameObject
+    internal class Ball : GameObject
     {
-        private float _dx;
-        public float Dx
-        {
-            get => _dx;
-            set => _dx = value;
-        }
+        public float Dx { get; set; }
 
-        private float _dy;
-        public float Dy
-        {
-            get => _dy;
-            set => _dy = value;
-        }
+        public float Dy { get; set; }
     }
 }
