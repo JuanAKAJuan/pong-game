@@ -55,6 +55,13 @@
 /processorParam:TextureFormat=Color
 /build:media/ball.png
 
+#begin media/NameFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:media/NameFont.spritefont
+
 #begin media/numbers.bmp
 /importer:TextureImporter
 /processor:TextureProcessor

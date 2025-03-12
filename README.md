@@ -16,4 +16,4 @@ is continuously played. Use the MediaPlayer and Song classes for this task.
     - Toggle (pause and resume) the background music using "P".
 - [x] Randomize the initial speed of the ball in the Game1. ResetGame() method so that the x component of the
 speed is in the intervals [4, 6] or [-6, -4] and the y component is in the intervals [3, 5] or [-5, -3]. Use the Random class for this task.
-- [ ] Display a text that displays your name. You need to generate a new sprite font.
+- [x] Display a text that displays your name. You need to generate a new sprite font.

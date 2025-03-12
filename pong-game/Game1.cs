@@ -22,6 +22,9 @@ namespace Ping_Pong
         private int _score2;
         private SpriteFont _scoreFont;
 
+        private SpriteFont _nameFont;
+        private string _myName = "Juan Mireles";
+
         private Ball _ball;
         private Texture2D _textureBall;
 
@@ -172,6 +175,7 @@ namespace Ping_Pong
 
             _scoreFont =
                 Content.Load<SpriteFont>(@"media\ScoreFont");
+            _nameFont = Content.Load<SpriteFont>(@"media\NameFont");
 
             _textureBackground = Content.Load<Texture2D>(@"media\background");
         }
@@ -434,7 +438,7 @@ namespace Ping_Pong
         private void DrawScore(float x, float y, int score)
         {
             string scoreText = $"{score}";
-            _spriteBatch.DrawString(_scoreFont, scoreText, new Vector2(x, y), Color.Gray);
+            _spriteBatch.DrawString(_scoreFont, scoreText, new Vector2(x, y), Color.OrangeRed);
         }
 
         // actually draw our game objects
@@ -454,13 +458,19 @@ namespace Ping_Pong
             DrawScore(ScreenWidth * 0.65f,
                 20, _score2);
 
+            Vector2 textSize = _nameFont.MeasureString(_myName);
+            float x = (GraphicsDevice.Viewport.Width - textSize.X) / 2;
+            Vector2 textPosition = new Vector2(x, 30);
+            
+            _spriteBatch.DrawString(_nameFont, _myName, textPosition, Color.OrangeRed);
+
             // render the game objects
             _spriteBatch.Draw((Texture2D)_ball.Visual,
-                _ball.Rect, Color.White);
+                _ball.Rect, Color.Orange);
             _spriteBatch.Draw((Texture2D)_paddle1.Visual,
-                _paddle1.Rect, Color.White);
+                _paddle1.Rect, Color.Orange);
             _spriteBatch.Draw((Texture2D)_paddle2.Visual,
-                _paddle2.Rect, Color.White);
+                _paddle2.Rect, Color.Orange);
 
             // we're done drawing
             _spriteBatch.End();
